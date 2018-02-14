@@ -11,7 +11,7 @@ const port = process.env.PORT;
 app.use(express.static('public'));
 
 // add route for /greeting
-app.get('./greeting', (req, res)=>{
+app.get('/greeting', (req, res)=>{
   let lang = req.headers['accept-language'];
   const defaultLang='en';
   if (!greeting[lang]) lang=defaultLang;
